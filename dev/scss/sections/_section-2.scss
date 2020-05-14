@@ -31,7 +31,7 @@
             height: 320px;
 
             @include md {
-                height: 246px;
+                height: 255px;
                 grid-area: aside;
             }
 
@@ -55,16 +55,32 @@
                 @include md {
                     text-align: left;
                 }
+
+                font-size: rem-calc(35);
+
+                @include lg {
+                    font-size: rem-calc(45);
+                }
+            }
+
+            p {
+                font-size: rem-calc(17);
+                line-height: rem-calc(23);
+
+                @include lg {
+                    font-size: rem-calc(20);
+                    line-height: rem-calc(29);
+                }
             }
 
             @include md {
                 grid-template-columns: 10% auto 10%;
-                padding: 20px 0 20px;
+                padding: 10px 0 1px;
                 grid-area: article;
             }
 
             @include lg {
-                padding: 130px;
+                padding: 75px;
             }
 
             #section-2-content {

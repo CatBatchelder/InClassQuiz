@@ -364,6 +364,7 @@ ul li {
 ============= */
 p {
   font-family: "Lato", sans-serif;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -413,12 +414,14 @@ footer #footer-content ul {
 footer #footer-content ul li {
   margin: 0 10px;
 }
-footer #footer-content ul li a:link, footer #footer-content ul li a:visited {
+footer #footer-content ul li a:link,
+footer #footer-content ul li a:visited {
   color: #6B6B6B;
   transition: 0.25s;
   font-size: 1.875rem;
 }
-footer #footer-content ul li a:hover, footer #footer-content ul li a:active {
+footer #footer-content ul li a:hover,
+footer #footer-content ul li a:active {
   color: #fff;
 }
 @media (min-width: 992px) {
@@ -499,7 +502,7 @@ footer #footer-content h1 span {
 }
 @media (min-width: 768px) {
   #section-2 #section-2-xl aside {
-    height: 246px;
+    height: 255px;
     grid-area: aside;
   }
 }
@@ -518,22 +521,38 @@ footer #footer-content h1 span {
 }
 #section-2 #section-2-xl #section-2-container h1 {
   text-align: center;
+  font-size: 2.1875rem;
 }
 @media (min-width: 768px) {
   #section-2 #section-2-xl #section-2-container h1 {
     text-align: left;
   }
 }
+@media (min-width: 992px) {
+  #section-2 #section-2-xl #section-2-container h1 {
+    font-size: 2.8125rem;
+  }
+}
+#section-2 #section-2-xl #section-2-container p {
+  font-size: 1.0625rem;
+  line-height: 1.4375rem;
+}
+@media (min-width: 992px) {
+  #section-2 #section-2-xl #section-2-container p {
+    font-size: 1.25rem;
+    line-height: 1.8125rem;
+  }
+}
 @media (min-width: 768px) {
   #section-2 #section-2-xl #section-2-container {
     grid-template-columns: 10% auto 10%;
-    padding: 20px 0 20px;
+    padding: 10px 0 1px;
     grid-area: article;
   }
 }
 @media (min-width: 992px) {
   #section-2 #section-2-xl #section-2-container {
-    padding: 130px;
+    padding: 75px;
   }
 }
 #section-2 #section-2-xl #section-2-container #section-2-content {
@@ -559,6 +578,12 @@ footer #footer-content h1 span {
 }
 #section-3 #section-3-content h1 {
   text-align: center;
+  font-size: 2.1875rem;
+}
+@media (min-width: 992px) {
+  #section-3 #section-3-content h1 {
+    font-size: 2.8125rem;
+  }
 }
 #section-3 ul {
   display: grid;
@@ -570,55 +595,85 @@ footer #footer-content h1 span {
 @media (min-width: 768px) {
   #section-3 ul {
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "c1 c2" "c3";
-    align-items: center;
+    grid-template-columns: 2;
+    grid-template-areas: "c1 c2" "c3 c3";
+    justify-items: center;
+    gap: 30px;
   }
 }
 @media (min-width: 992px) {
   #section-3 ul {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "c1" "c2" "c3";
+    grid-template-rows: 1;
+    grid-template-areas: "c1 c2 c3";
     grid-template-rows: initial;
   }
 }
 #section-3 ul article {
   background-color: #ECECEC;
+  padding: 10px;
 }
 #section-3 ul article h2 {
   text-align: center;
+  font-size: 1.5rem;
+}
+@media (min-width: 992px) {
+  #section-3 ul article h2 {
+    font-size: 1.8rem;
+  }
 }
 #section-3 ul article p {
-  text-align: justify;
+  text-align: center;
+  font-size: 1rem;
+}
+@media (min-width: 992px) {
+  #section-3 ul article p {
+    font-size: 1.2rem;
+  }
 }
 #section-3 ul article h5 {
   text-align: left;
+  background-image: #ECECEC;
+  font-size: 0.875rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  #section-3 ul article h5 {
+    font-size: 1.05rem;
+  }
 }
 #section-3 ul #c1 {
   grid-area: c1;
   display: grid;
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "aside" "article";
 }
-#section-3 ul #c1 #c1img {
+#section-3 ul #c1 aside {
   background-image: url("../img/section-3/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: aside;
-  height: 200px;
   width: 100%;
 }
 #section-3 ul #c1 article {
   grid-area: article;
+  background-color: #ECECEC;
 }
 @media (min-width: 768px) {
   #section-3 ul #c1 {
-    width: 200px;
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  #section-3 ul #c1 {
+    width: 360px;
   }
 }
 #section-3 ul #c2 {
   grid-area: c2;
   display: grid;
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "aside" "article";
 }
 #section-3 ul #c2 aside {
@@ -626,7 +681,6 @@ footer #footer-content h1 span {
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: aside;
-  height: 200px;
   width: 100%;
 }
 #section-3 ul #c2 article {
@@ -634,13 +688,18 @@ footer #footer-content h1 span {
 }
 @media (min-width: 768px) {
   #section-3 ul #c2 {
-    width: 200px;
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  #section-3 ul #c2 {
+    width: 360px;
   }
 }
 #section-3 ul #c3 {
   grid-area: c3;
   display: grid;
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "aside" "article";
 }
 #section-3 ul #c3 aside {
@@ -648,7 +707,6 @@ footer #footer-content h1 span {
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: aside;
-  height: 200px;
   width: 100%;
 }
 #section-3 ul #c3 article {
@@ -656,6 +714,11 @@ footer #footer-content h1 span {
 }
 @media (min-width: 768px) {
   #section-3 ul #c3 {
-    width: 200px;
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  #section-3 ul #c3 {
+    width: 360px;
   }
 }

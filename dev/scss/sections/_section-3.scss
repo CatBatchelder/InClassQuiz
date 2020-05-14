@@ -18,6 +18,11 @@
 
         h1 {
             text-align: center;
+            font-size: rem-calc(35);
+
+            @include lg {
+                font-size: rem-calc(45);
+            }
         }
     }
 
@@ -33,42 +38,64 @@
 
         @include md {
             grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: 2;
             grid-template-areas:
                 "c1 c2"
-                "c3";
-            align-items: center;
+                "c3 c3";
+            justify-items: center;
+            gap: 30px;
         }
 
         @include lg {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: "c1""c2""c3";
+            grid-template-rows: 1;
+            grid-template-areas:
+                "c1 c2 c3";
             grid-template-rows: initial;
         }
 
         article {
             background-color: $grey;
+            padding: 10px;
 
             h2 {
                 text-align: center;
+                font-size: rem-calc(24);
+
+                @include lg {
+                    font-size: rem-calc(28.8);
+                }
             }
 
             p {
-                text-align: justify;
+                text-align: center;
+                font-size: rem-calc(16);
+
+                @include lg {
+                    font-size: rem-calc(19.2);
+                }
             }
 
             h5 {
                 text-align: left;
+                background-image: $grey;
+                font-size: rem-calc(14);
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+
+                @include lg {
+                    font-size: rem-calc(16.8);
+                }
             }
         }
 
         #c1 {
 
-            #c1img {
+            aside {
                 background-image: url("../img/section-3/1.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 grid-area: aside;
-                height: 200px;
                 width: 100%;
             }
 
@@ -76,14 +103,19 @@
 
             article {
                 grid-area: article;
+                background-color: $grey;
             }
 
             display: grid;
-            grid-template-rows: repeat(2, 200px);
+            grid-template-rows: repeat(2, 1fr);
             grid-template-areas: "aside""article";
 
             @include md {
-                width: 200px;
+                width: 300px;
+            }
+
+            @include lg {
+                width: 360px;
             }
         }
 
@@ -93,7 +125,6 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 grid-area: aside;
-                height: 200px;
                 width: 100%;
             }
 
@@ -104,11 +135,15 @@
             }
 
             display: grid;
-            grid-template-rows: repeat(2, 200px);
+            grid-template-rows: repeat(2, 1fr);
             grid-template-areas: "aside""article";
 
             @include md {
-                width: 200px;
+                width: 300px;
+            }
+
+            @include lg {
+                width: 360px;
             }
         }
 
@@ -118,7 +153,6 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 grid-area: aside;
-                height: 200px;
                 width: 100%;
             }
 
@@ -129,11 +163,15 @@
             }
 
             display: grid;
-            grid-template-rows: repeat(2, 200px);
+            grid-template-rows: repeat(2, 1fr);
             grid-template-areas: "aside""article";
 
             @include md {
-                width: 200px;
+                width: 300px;
+            }
+
+            @include lg {
+                width: 360px;
             }
         }
     }
