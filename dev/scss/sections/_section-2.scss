@@ -1,0 +1,32 @@
+/* =============
+    Section 1
+============= */
+
+#section-2 {
+
+    aside {
+        background-image: url("..img/section2/feet.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 320px;
+
+        @include md {
+            height: 246px;
+        }
+
+        @include lg {
+            height: 600px;
+        }
+
+    }
+
+    #section-2-container {
+        display: grid;
+        grid-template-areas: ". section-2 .";
+        grid-template-columns: 15px auto 15px;
+
+        #section-2-content {
+            grid-area: section-2;
+        }
+    }
+}

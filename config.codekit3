@@ -9,16 +9,6 @@
 	],
 "creatorBuild": "32147",
 "files": {
-	"/deploy/css/styles.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/deploy/css/styles-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/deploy/img/section-1/hero.jpg": {
 		"ft": 16384,
 		"iS": 621748,
@@ -162,6 +152,14 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/dev/footer.html",
+		"oF": 0
+		},
+	"/dev/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dev/index.html",
 		"oF": 0
 		},
 	"/dev/index.kit": {
@@ -322,6 +320,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/dev/scss/sections/_section-1.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/dev/scss/sections/_section-2.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/dev/scss/sections/_section-2.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/dev/scss/sections/_section-3.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/dev/scss/sections/_section-3.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 0
