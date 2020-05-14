@@ -443,30 +443,77 @@ footer #footer-content h1 {
 }
 
 /* =============
-    Section 1
+    Section 2
 ============= */
-#section-2 aside {
-  background-image: url("..img/section2/feet.jpg");
+@media (min-width: 1200px) {
+  #section-2 {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". section-2-xl .";
+  }
+}
+#section-2 #section-2-xl {
+  grid-area: section-2-xl;
+}
+@media (min-width: 768px) {
+  #section-2 #section-2-xl {
+    display: grid;
+    grid-template-columns: 65% auto;
+    grid-template-areas: "article aside";
+  }
+}
+@media (min-width: 992px) {
+  #section-2 #section-2-xl {
+    grid-template-columns: 50% auto;
+    grid-template-areas: "aside article";
+  }
+}
+#section-2 #section-2-xl aside {
+  background-image: url("../img/section-2/feet.jpg");
   background-size: cover;
   background-position: center;
   height: 320px;
 }
 @media (min-width: 768px) {
-  #section-2 aside {
+  #section-2 #section-2-xl aside {
     height: 246px;
+    grid-area: aside;
   }
 }
 @media (min-width: 992px) {
-  #section-2 aside {
+  #section-2 #section-2-xl aside {
     height: 600px;
   }
 }
-#section-2 #section-2-container {
+#section-2 #section-2-xl #section-2-container {
   display: grid;
   grid-template-areas: ". section-2 .";
   grid-template-columns: 15px auto 15px;
+  background-color: #ECECEC;
+  text-align: justify;
+  padding: 45px 0 100px;
 }
-#section-2 #section-2-container #section-2-content {
+#section-2 #section-2-xl #section-2-container h1 {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #section-2 #section-2-xl #section-2-container h1 {
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  #section-2 #section-2-xl #section-2-container {
+    grid-template-columns: 10% auto 10%;
+    padding: 20px 0 20px;
+    grid-area: article;
+  }
+}
+@media (min-width: 992px) {
+  #section-2 #section-2-xl #section-2-container {
+    padding: 130px;
+  }
+}
+#section-2 #section-2-xl #section-2-container #section-2-content {
   grid-area: section-2;
 }
 
