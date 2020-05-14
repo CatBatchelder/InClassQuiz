@@ -8,6 +8,7 @@ footer{
     text-align: center;
     padding: 45px;
 
+
     #footer-content{
         ul{
             display: flex;
@@ -26,10 +27,24 @@ footer{
                     color: $white;
                 }
             }
+
+            @include lg{
+                display: flex;
+                justify-content: flex-start;;
+            }
     }
 
  h1{
      font-size: rem-calc(11);
+
+     span{
+         color: red;
+     }
+
+     @include lg{
+         display: flex;
+         justify-content: flex-end;
+     }
  }
 
 
